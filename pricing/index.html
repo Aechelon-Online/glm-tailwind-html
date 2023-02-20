@@ -22,6 +22,7 @@
  
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;400;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../css/styles.css">
+    <script src="../script.js" defer></script>
 </head>
 <body>
     <div class="relative h-[100px] smallMobile:h-[115px] tablet:h-[140px]">
@@ -30,36 +31,19 @@
                 <p class="text-blue-100 absolute right-0 p-2 pr-[20px] tablet:text-[1.25rem] tablet:top-[3px] tablet:pr-[15px]"><a href="tel:8174870886">817.487.0886</a></p>
             </div>
 
-            
-            <!-- <div>
-                <AiOutlineClose onClick={handleNav} class="text-3xl absolute tablet:hidden z-[99] top-[3.375rem] right-5" />
-                    
-                <div class="absolute top-[7rem] right-0 tablet:hidden w-[30%] bg-white flex flex-col items-center justify-around z-[20]">
-                    <Link to="/about" class="w-full flex justify-center p-2 cursor-pointer hover:underline">About</Link>
-                    <Link to="/blog" class="w-full flex justify-center p-2 cursor-pointer hover:underline">Blog</Link>
-                    <Link to="/pricing" class="w-full flex justify-center p-2 cursor-pointer hover:underline">Pricing</Link>
-                    <Link to="/contact" class="w-full flex justify-center p-2 cursor-pointer hover:underline">Contact</Link>
-                </div>
-                <Link to="/subscribe" class="hidden">Subscribe</Link>
-            </div> -->
-            
-                <!-- <div>
-                    <AiOutlineMenu onClick={handleNav} class="text-3xl absolute top-[3.375rem] tablet:hidden z-[99] smallMobile:top-[3.75rem] right-5" />
-                </div> -->
-            
-
             <div class="logo-title absolute left-5 top-[3.75rem] flex items-center justify-between tablet:top-[4.25rem]">
                 <a href="/"><img src="../images/glm-black.png" class="w-[3rem] smallMobile:w-[4rem] tablet:w-[6rem]" /></a>
                 <h4 class="text-[0.875rem] smallMobile:text-xl px-3 tablet:text-2xl">Greg Luce Music</h4>
             </div>
-            <div class="absolute top-7 right-5 w-[40%] lg:max-w-sm tablet:top-[4.875rem]">
-                <ul class="hidden tablet:flex tablet:text-xl justify-between items-center">
-                    <li><a href="/about/index.html">About</a></li>
-                    <li><a href="/blog/index.html">Blog</a></li>
-                    <li><a href="/pricing/index.html">Pricing</a></li>
-                    <li><a href="/contact/index.html">Contact</a></li>
+            <div class="absolute hidden menu tablet:block max-w-[200px] tablet:max-w-full top-[6rem] smallMobile:top-[7rem] right-0 tablet:right-5 w-[40%] lg:max-w-sm tablet:top-[4.875rem]">
+                <ul class="tablet:w-full tablet:flex tablet:text-xl justify-between items-center">
+                    <li class="p-2 bg-white text-center smallMobile:text-[1.25rem] tablet:p-0"><a href="../about/index.html">About</a></li>
+                    <li class="p-2 bg-white text-center smallMobile:text-[1.25rem] tablet:p-0"><a href="../blog/index.html">Blog</a></li>
+                    <li class="p-2 bg-white text-center smallMobile:text-[1.25rem] tablet:p-0"><a href="../pricing/index.html">Pricing</a></li>
+                    <li class="p-2 bg-white text-center smallMobile:text-[1.25rem] tablet:p-0"><a href="../contact/index.html">Contact</a></li>
                 </ul>
             </div>
+            <img src="/images/menu.png" onclick="handleNav()" class="toggle-icon w-[1.5rem] absolute tablet:hidden z-[99] top-[3.625rem] smallMobile:w-[2rem] smallMobile:top-[3.75rem] right-5 text-red-600">
         </div>
     </div>
     <div class="h-[3px] w-[95%] mx-auto bg-black"></div>

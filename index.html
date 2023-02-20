@@ -44,7 +44,9 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js"
     integrity="sha512-qTXRIMyZIFb8iQcfjXWCO8+M5Tbc38Qi5WzdPOYZHIlZpzBHG3L3by84BBBOiRGiEb7KKtAOAs5qYdUiZiQNNQ=="
     crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0">
+    <script src="script.js" defer></script>
 </head>
 <body>
     <div class="relative h-[100px] smallMobile:h-[115px] tablet:h-[140px]">
@@ -53,36 +55,19 @@
                 <p class="text-blue-100 absolute right-0 p-2 pr-[20px] tablet:text-[1.25rem] tablet:top-[3px] tablet:pr-[15px]"><a href="tel:8174870886">817.487.0886</a></p>
             </div>
 
-            
-            <!-- <div>
-                <AiOutlineClose onClick={handleNav} class="text-3xl absolute tablet:hidden z-[99] top-[3.375rem] right-5" />
-                    
-                <div class="absolute top-[7rem] right-0 tablet:hidden w-[30%] bg-white flex flex-col items-center justify-around z-[20]">
-                    <Link to="/about" class="w-full flex justify-center p-2 cursor-pointer hover:underline">About</Link>
-                    <Link to="/blog" class="w-full flex justify-center p-2 cursor-pointer hover:underline">Blog</Link>
-                    <Link to="/pricing" class="w-full flex justify-center p-2 cursor-pointer hover:underline">Pricing</Link>
-                    <Link to="/contact" class="w-full flex justify-center p-2 cursor-pointer hover:underline">Contact</Link>
-                </div>
-                <Link to="/subscribe" class="hidden">Subscribe</Link>
-            </div> -->
-            
-                <!-- <div>
-                    <AiOutlineMenu onClick={handleNav} class="text-3xl absolute top-[3.375rem] tablet:hidden z-[99] smallMobile:top-[3.75rem] right-5" />
-                </div> -->
-            
-
-            <div class="logo-title absolute left-5 top-[3.75rem] flex items-center justify-between tablet:top-[4.25rem]">
+            <div class="logo-title absolute left-5 top-[3.625rem] flex items-center justify-between smallMobile:top-[3.75rem] tablet:top-[4.25rem]">
                 <a href="/"><img src="/images/glm-black.png" class="w-[3rem] smallMobile:w-[4rem] tablet:w-[6rem]" /></a>
                 <h4 class="text-[0.875rem] smallMobile:text-xl px-3 tablet:text-2xl">Greg Luce Music</h4>
             </div>
-            <div class="absolute top-7 right-5 w-[40%] lg:max-w-sm tablet:top-[4.875rem]">
-                <ul class="hidden tablet:flex tablet:text-xl justify-between items-center">
-                    <li><a href="about/index.html">About</a></li>
-                    <li><a href="blog/index.html">Blog</a></li>
-                    <li><a href="/pricing/index.html">Pricing</a></li>
-                    <li><a href="/contact/index.html">Contact</a></li>
+            <div class="absolute hidden menu tablet:block max-w-[200px] tablet:max-w-full top-[6rem] smallMobile:top-[7rem] right-0 tablet:right-5 w-[40%] lg:max-w-sm tablet:top-[4.875rem]">
+                <ul class="tablet:w-full tablet:flex tablet:text-xl justify-between items-center">
+                    <li class="p-2 bg-white text-center smallMobile:text-[1.25rem] tablet:p-0"><a href="about/index.html">About</a></li>
+                    <li class="p-2 bg-white text-center smallMobile:text-[1.25rem] tablet:p-0"><a href="blog/index.html">Blog</a></li>
+                    <li class="p-2 bg-white text-center smallMobile:text-[1.25rem] tablet:p-0"><a href="/pricing/index.html">Pricing</a></li>
+                    <li class="p-2 bg-white text-center smallMobile:text-[1.25rem] tablet:p-0"><a href="/contact/index.html">Contact</a></li>
                 </ul>
             </div>
+            <img src="/images/menu.png" onclick="handleNav()" class="toggle-icon w-[1.5rem] absolute tablet:hidden z-[99] top-[3.625rem] smallMobile:w-[2rem] smallMobile:top-[3.75rem] right-5 text-red-600">
         </div>
     </div>
     <div class="w-[100%] h-[65vh] min-h-[450px] mobile:h-[65vh] tablet:h-[85vh] relative flex justify-center">
@@ -91,10 +76,10 @@
         <div class="absolute w-full h-[100%] md:h-[80%] bg-black/40 z-[0] overflow-hidden flex justify-center items-center">
         <h1 class="text-white absolute leading-[2rem] mobile:leading-[2.5rem] text-center text-[1.375rem] mobile:text-[1.75rem] smallTablet:text-[2.25rem] smallTablet:leading-[3rem] tablet:text-[2rem] laptop:text-[2.75rem] z-[10]">ELEVATE YOUR EVENT TO <span class="font-bold text-[1.75rem] mobile:text-[2.25rem] smallTablet:text-[2.75rem] tablet:text-[2.5rem] laptop:text-[3.25rem] text-transparent bg-clip-text bg-gradient-to-tr from-red-400 to-yellow-300">EXTRAORDINARY.</span></h1>
         </div>
-    <div class="absolute h-[39%] w-[95%] text-[0.625rem] bottom-0 text-white">
+    <div class="absolute h-[40%] w-[95%] text-[0.625rem] bottom-0 text-white">
       <div class="flex justify-center mx-1">
         <form
-          class="w-[100%] max-w-[450px] tablet:max-w-[475px] h-[175px] bg-gray-800/50 border-solid border-2 border-gray-700 p-2 flex flex-col items-center justify-center validate"
+          class="w-[100%] max-w-[450px] tablet:max-w-[475px] h-[165px] bg-gray-800/50 border-solid border-2 border-gray-700 p-2 flex flex-col items-center justify-center validate"
           action="https://greglucemusic.us8.list-manage.com/subscribe/post?u=93a75b530a80d657cb9b80df0&amp;id=7af118c516&amp;f_id=00fe1ee0f0"
           method="post"
           id="mc-embedded-subscribe-form"
