@@ -4,7 +4,9 @@ module.exports = {
     "./src/**/*.{html,js}",
     "./index.html",
     "./blog/index.html",
-    "./email/index.html"
+    "./email/index.html",
+    "./subscribe/index.html",
+    "./contact/index.html"
   ],
   theme: {
     screens: {

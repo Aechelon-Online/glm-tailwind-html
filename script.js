@@ -1,5 +1,11 @@
 const dropDown = document.querySelector(".menu")
 const toggleIcon = document.querySelector(".toggle-icon")
+const eventSelect = document.querySelector(".event-select")
+const serviceSelect = document.querySelector(".service-select")
+const radios = document.querySelector(".event-select")
+const list = document.querySelector(".list")
+const dots = document.querySelector(".selections")
+const checkboxes = document.querySelector(".entertainment-checkboxes")
 
 let isOpen = false
 
@@ -8,6 +14,31 @@ function handleNav() {
     isOpen = !isOpen
     toggleIcon.src = isOpen ?  "/images/cancel.png" : "/images/menu.png" 
 }
+
+let isDropped = true
+
+checkboxes.addEventListener('click', () => {
+    list.classList.toggle("hidden")
+    isDropped = !isDropped
+    serviceSelect.innerText = isDropped ? "▼" : "✕"
+    if(serviceSelect.innerText === "✕"){
+        serviceSelect.style.margin = "-2px 1px"
+    } else {
+        serviceSelect.style.margin = "0"
+    }
+})
+
+radios.addEventListener('click', () => {
+    dots.classList.toggle("hidden")
+    isDropped = !isDropped
+    eventSelect.innerText = isDropped ? "▼" : "✕"
+    if(eventSelect.innerText === "✕"){
+        eventSelect.style.margin = "-2px 1px"
+    } else {
+        eventSelect.style.margin = "0"
+    }
+   
+})
 
 // Calendar API JS
 
