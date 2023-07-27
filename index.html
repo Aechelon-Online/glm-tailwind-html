@@ -90,6 +90,17 @@
         width: 100%;
       }
 
+      .fadeIn {
+        transform: scale(0.9);
+        opacity: 0;
+        transition: 200ms;
+      }
+
+      .fadeIn.show {
+        transform: scale(1);
+        opacity: 1;
+      }
+
       @media screen and (min-width: 550px) {
         .date-wrapper {
           width: 46vw;
@@ -189,25 +200,25 @@
     </div>
     </div>
     <div class="text-black w-full grid grid-cols-1 smallTablet:grid-cols-2 laptop:grid-cols-4 laptop:h-[375px]">
-        <div class="bg-blue-200 min-h-[150px] flex justify-center items-center pl-2 smallTablet:min-h-[150px] h-[40vh] laptop:flex-col laptop:h-[375px] laptop:justify-start">
+        <div class="bg-blue-200 min-h-[150px] flex justify-center items-center pl-2 smallTablet:min-h-[150px] h-[40vh] laptop:flex-col laptop:h-[375px] laptop:justify-start fadeIn">
             <div class="w-[30%] h-[100%] flex justify-center items-center text-[2.25rem] smallTablet:flex-col smallMobile:text-[3rem] smallTablet:mb-2 laptop:flex-row laptop:mb-[-10px] laptop:w-[100%] laptop:h-[20vh]">DJ
             <img src="/images/dj-arms.png" alt="dj icon with lifted arms" class="w-[65px] ml-[-5px] smallTablet:ml-0 smallMobile:w-[85px]" />
             </div>
             <p class="w-[60%] text-[0.75rem] px-4 smallMobile:text-[0.9rem] tablet:text-[1.125rem] laptop:w-[80%]">Creating a unique energetic atmosphere for you through a song list tailored to your specific desires.</p>
         </div>
-        <div class="bg-blue-400 min-h-[150px] pl-2 flex justify-center items-center smallTablet:min-h-[150px] h-[40vh] laptop:flex-col laptop:h-[375px] laptop:justify-start">
+        <div class="bg-blue-400 min-h-[150px] pl-2 flex justify-center items-center smallTablet:min-h-[150px] h-[40vh] laptop:flex-col laptop:h-[375px] laptop:justify-start fadeIn">
             <div class="w-[30%]  h-[100%] flex justify-center items-center text-[2rem] smallTablet:flex-col smallMobile:text-[2.625rem] smallTablet:mb-3 laptop:flex-row laptop:mb-[-10px] laptop:w-[100%] laptop:h-[20vh] laptop:text-[3rem]">Live
             <img src="/images/guitar-logo.png" alt="acoustic guitar icon" class="w-[50px] ml-[-5px] smallTablet:ml-0 smallMobile:w-[60px] smallTablet:w-[95px]" />
             </div>
             <p class="w-[60%] text-[0.75rem] px-4 smallMobile:text-[0.9rem] tablet:text-[1.125rem] laptop:w-[80%]">Performing to entertain you and your guests with a blend of acoustic and looping effects made to instill groove in your event.</p>
         </div>
-        <div class="bg-blue-500 min-h-[150px] pl-2 flex justify-center items-center smallTablet:min-h-[150px] h-[40vh] laptop:flex-col laptop:h-[375px] laptop:justify-start">
+        <div class="bg-blue-500 min-h-[150px] pl-2 flex justify-center items-center smallTablet:min-h-[150px] h-[40vh] laptop:flex-col laptop:h-[375px] laptop:justify-start fadeIn">
             <div class="w-[30%] h-[100%] flex justify-center items-center text-[2.125rem] smallTablet:flex-col smallMobile:text-[2.75rem] smallTablet:mb-2 laptop:flex-row laptop:mb-[-10px] laptop:w-[100%] laptop:h-[20vh]">MC
             <img src="/images/mic-logo.png" alt="microphone icon" class="w-[55px] ml-[-10px] smallMobile:w-[70px]" />
             </div>
             <p class="w-[60%] text-[0.75rem] px-4 smallMobile:text-[0.9rem] tablet:text-[1.125rem] laptop:w-[80%]">Guiding the event transitions and announcments and allowing your carefree enjoyment to be experienced to the fullest.</p>
         </div>
-        <div class="bg-blue-300 min-h-[150px] flex justify-center items-center smallTablet:min-h-[150px] h-[40vh] laptop:flex-col laptop:h-[375px] laptop:justify-start">
+        <div class="bg-blue-300 min-h-[150px] flex justify-center items-center smallTablet:min-h-[150px] h-[40vh] laptop:flex-col laptop:h-[375px] laptop:justify-start fadeIn">
             <div class="w-[30%] h-[100%] flex justify-center items-center text-[2.25rem] mr-[-5px] smallTablet:mr-0 smallTablet:flex-col smallMobile:text-[2.875rem] smallTablet:mb-2 laptop:flex-row laptop:mb-[-10px] laptop:w-[100%] laptop:h-[20vh]">FX
             <img src="/images/dance-lights-logo.png" alt="icon of small laser ball above disco floor" class="w-[65px]  ml-[-10px] smallTablet:ml-0 smallMobile:w-[90px]" />
             </div>
@@ -218,7 +229,7 @@
       <div class="h-full w-full bg-gradient-to-tr from-red-400/80 to-yellow-300/80 p-1">
         <div class=" h-full w-full p-[0.5rem] bg-white">
            
-            <h2 class="text-[0.75rem] smallMobile:text-[0.875rem] mobile:text-[1rem] tablet:text-[1.25rem] laptop:text-[1.5rem] font-bold p-[1.5rem]">If you're looking for the perfect music entertainment solution for your wedding reception, Greg Luce Music is the answer. Greg Luce is a professional DJ and musician with a wealth of experience providing top-notch entertainment for weddings. He is highly skilled and passionate about creating unforgettable experiences for brides and grooms. With his extensive music selection and exceptional DJ skills, Greg is sure to keep your guests dancing all night long. He offers upfront pricing with a list of included services and items, ensuring you get a fair and reasonable wedding DJ cost for his high-quality entertainment. If you're searching for a "wedding DJ near me," Greg Luce Music is the premier local solution. Contact him today to learn more about his services and start planning your dream wedding.</h2>
+            <h2 class="text-[0.75rem] smallMobile:text-[0.875rem] mobile:text-[1rem] tablet:text-[1.25rem] laptop:text-[1.5rem] font-bold p-[1.5rem]">If you're looking for the perfect music entertainment solution for your wedding reception, <span class="underline text-blue-700"><a href="/contact/index.html">Greg Luce Music</a></span> is the answer. Greg Luce is a professional DJ and musician with a wealth of experience providing top-notch entertainment for weddings. He is highly skilled and passionate about creating unforgettable experiences for brides and grooms. With his extensive music selection and exceptional DJ skills, Greg is sure to keep your guests dancing all night long. He offers upfront pricing with a list of included services and items, ensuring you get a fair and reasonable wedding DJ cost for his high-quality entertainment. If you're searching for a "wedding DJ near me," Greg Luce Music is the premier local solution. Contact him today to learn more about his services and start planning your dream wedding.</h2>
         </div>
       </div>
     </div>

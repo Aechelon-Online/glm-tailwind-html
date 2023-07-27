@@ -22,7 +22,7 @@
  
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;400;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../css/styles.css">
-    <script src="../script.js" defer></script>
+    <script src="../contact.js" defer></script>
     <style>
         .block {
             display: block;
@@ -83,7 +83,7 @@
                 </div>
                 <div class="smallTablet:flex justify-between">
                     <div class="mx-4 mt-[-8px] smallTablet:mt-0 smallTablet:w-full">
-                        <label class="" for="date-of-event" required>Date of Event</label>
+                        <label class="" for="date-of-event" placeholder="Click for date" required>Date of Event</label>
                         <div class="border-4 border-blue-300 rounded">
                         <input type="date" value="" class="w-[100%] px-1.5 text-sm" name="Date Of Event">
                         </div>
@@ -95,19 +95,19 @@
                                 <input class="border-4 border-blue-300 rounded w-full event-select" type="text" name="Event Selections">
                                 <span class="absolute left-[0.25rem] top-[4px] px-1 event-arrow arrow-click">▼</span>
                                 <div class="selections absolute z-10 hidden bg-white p-2">
-                                    <label for="wedding" class="flex">
+                                    <label for="wedding" class="flex items-center">
                                         <input type="radio" name="wedding" id="wedding" class="" value="Wedding">
                                         <p class="p-1">Wedding</p>
                                     </label>
-                                    <label for="private-party" class="flex">
-                                        <input type="radio" name="private party" id="private-party" class="">
+                                    <label for="private-party" class="flex items-center">
+                                        <input type="radio" name="private party" id="private-party" class="justify-center items-center">
                                         <p class="p-1">Private Party</p>
                                     </label>
-                                    <label for="corporate-event" class="flex">
+                                    <label for="corporate-event" class="flex items-center">
                                         <input type="radio" name="corporate event" id="corporate-event" class="">
                                         <p class="p-1">Corporate Event</p>
                                     </label>
-                                    <label for="other" class="flex">
+                                    <label for="other" class="flex items-center">
                                     <input type="radio" name="other" id="other" class="">
                                     <p class="p-1">Other</p>
                                     </label>
@@ -129,23 +129,23 @@
                         <span class="absolute left-0 px-2 top-[4px] service-select select-arrow">▼</span>
                     </div>
                     <div class="list absolute bg-white hidden pl-2">
-                        <label for="omb" class="omb list-items flex">
+                        <label for="omb" class="omb list-items flex items-center">
                             <input type="checkbox" name="Solo Acoustic" id="solo-acoustic" class="selections">
                             <p class="picks p-1">Solo Acoustic</p>
                         </label>
-                        <label for="dj" class="dj list-items flex">
+                        <label for="dj" class="dj list-items flex items-center">
                             <input type="checkbox" name="DJ" id="list-dj" class="selections">
                             <p class="picks p-1">DJ</p>
                         </label>
-                        <label for="mc" class="mc list-items flex">
+                        <label for="mc" class="mc list-items flex items-center">
                             <input type="checkbox" name="MC" id="list-mc" class="selections">
                             <p class="picks p-1">Master Of Ceremonies</p>
                         </label>
-                        <label for="dance-floor-lighting" class="lighting-dance-floor list-items flex">
+                        <label for="dance-floor-lighting" class="lighting-dance-floor list-items flex items-center">
                         <input type="checkbox" name="Dance Floor Lights" id="lighting-dance-floor" class="selections">
                         <p class="picks p-1">Dance Floor Lights</p>
                         </label>
-                        <label for="uplighting" class="uplighting list-items flex">
+                        <label for="uplighting" class="uplighting list-items flex items-center">
                         <input type="checkbox" name="Uplighting" id="lighting-uplighting" class="selections">
                         <p class="picks p-1">Uplighting</p>
                         </label>

@@ -23,6 +23,18 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;400;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../css/prev.css">
     <script src="../script.js" defer></script>
+
+    <style>
+        .scaleUp {
+            transform: scale(1);
+            transition: 0.5s;
+        }
+
+        .scaleUp:hover {
+            transform: scale(1.05);
+        }
+
+    </style>
 </head>
 <body>
     <div class="relative h-[100px] smallMobile:h-[115px] tablet:h-[140px]">
@@ -49,7 +61,7 @@
     <div class="h-[3px] w-[95%] mx-auto bg-black"></div>
         <h1 class="text-4xl text-center font-bold p-[1rem] mobile:p-[1.5rem] tablet:p-[2rem] mobile:text-5xl tablet:text-6xl">Pricing</h1>
         <div class="grid grid-cols-1 tablet:grid-cols-3 gap-y-5 tablet:gap-x-5 w-[95%] mx-auto pb-5">
-            <div class="h-fit tablet:h-[450px] bg-red-500 rounded-2xl drop-shadow-xl flex flex-col justify-around tablet:justify-start items-center p-4">
+            <div class="h-fit tablet:h-[450px] bg-red-500 rounded-2xl drop-shadow-xl flex flex-col justify-around tablet:justify-start items-center p-4 scaleUp">
                 <p class="text-3xl mobile:text-4xl text-center text-gray-100 text-shadow-sm shadow-gray-900 laptop:mt-5">Bronze<sub class="text-sm p-[2px]">1</sub></p>
                 <div class="p-2">
                     <p class="text-4xl mobile:text-5xl tablet:text-4xl laptop:text-5xl text-center text-black-100 text-shadow-sm shadow-gray-400"><sup class="text-sm p-[2px] align-super">†</sup>Wedding - $1750</p>
@@ -60,7 +72,7 @@
                     <p class="text-[10px] px-2 text-center">Private party is either Solo Musician performance or DJ</p>
                 </div>
             </div>
-            <div class="h-fit tablet:h-[450px] bg-yellow-500 rounded-2xl drop-shadow-xl flex flex-col justify-around tablet:justify-start items-center p-4">
+            <div class="h-fit tablet:h-[450px] bg-yellow-500 rounded-2xl drop-shadow-xl flex flex-col justify-around tablet:justify-start items-center p-4 scaleUp">
                 <p class="text-3xl mobile:text-4xl text-center text-gray-100 text-shadow-sm shadow-gray-900 laptop:mt-5">Gold<sub class="text-sm p-[2px]">2</sub></p>
                 <div class="p-2">
                     <p class="text-4xl mobile:text-5xl tablet:text-4xl laptop:text-5xl text-center text-black-100 text-shadow-sm shadow-gray-400"><sup class="text-sm p-[2px] align-super">†</sup>Wedding - $2500</p>
@@ -71,7 +83,7 @@
                     <p class="text-[10px] px-2 text-center">Private party includes both Solo Musician performance and DJ along with LED glow tubes and DJ lighting.</p>
                 </div>
             </div>
-            <div class="h-fit tablet:h-[450px] bg-zinc-400 rounded-2xl drop-shadow-xl flex flex-col justify-around tablet:justify-start items-center p-4">
+            <div class="h-fit tablet:h-[450px] bg-zinc-400 rounded-2xl drop-shadow-xl flex flex-col justify-around tablet:justify-start items-center p-4 scaleUp">
                 <p class="text-3xl mobile:text-4xl text-center text-gray-100 text-shadow-sm shadow-gray-900 laptop:mt-5">Platinum<sub class="text-sm p-[2px]">3</sub></p>
                 <div class="p-2">
                     <p class="text-4xl mobile:text-5xl tablet:text-4xl laptop:text-5xl text-center text-black-100 text-shadow-sm shadow-gray-400"><sup class="text-sm p-[2px] align-super">†</sup>Wedding - $3250</p>

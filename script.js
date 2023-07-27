@@ -9,6 +9,22 @@ const list = document.querySelector(".list")
 const dots = document.querySelector(".selections")
 const checkboxes = document.querySelector(".entertainment-checkboxes")
 const arrowEvent = document.querySelector(".arrow-click")
+const cards = document.querySelectorAll(".fadeIn")
+
+const observer = new IntersectionObserver(entries => {
+  entries.forEach((entry, i) => {
+    setTimeout(() => {
+      entry.target.classList.toggle("show", entry.isIntersecting)
+    }, i * 250)
+  })
+}, {
+  threshold: 0.5,
+})
+
+cards.forEach(card => {
+  observer.observe(card)
+})
+
 
 let isOpen = false
 
@@ -18,40 +34,6 @@ function handleNav() {
     toggleIcon.src = isOpen ?  "/images/cancel.png" : "/images/menu.png" 
 }
 
-let isDropped = true
-
-checkboxes.addEventListener('click', () => {
-    list.classList.toggle("hidden")
-    isDropped = !isDropped
-    selectArrow.innerText = isDropped ? "▼" : "✕"
-    if(serviceSelect.innerText === "✕"){
-        serviceSelect.style.margin = "-2px 1px"
-    } else {
-        serviceSelect.style.margin = "0"
-    }
-})
-
-radios.addEventListener('click', () => {
-    dots.classList.toggle("hidden")
-    isDropped = !isDropped
-    eventArrow.innerText = isDropped ? "▼" : "✕"
-    if(eventSelect.innerText === "✕"){
-        eventSelect.style.margin = "-2px 1px"
-    } else {
-        eventSelect.style.margin = "0"
-    }
-})
-
-arrowEvent.addEventListener('click', () => {
-  dots.classList.toggle("hidden")
-  isDropped = !isDropped
-  eventArrow.innerText = isDropped ? "▼" : "✕"
-  if(eventSelect.innerText === "✕"){
-      eventSelect.style.margin = "-2px 1px"
-  } else {
-      eventSelect.style.margin = "0"
-  }
-})
 
 // Calendar API JS
 
@@ -95,7 +77,7 @@ async function getData () {
     const date = monthDateSplit[1]
     
 
-    if (summary === 'Tommy Bahamas' || summary.includes("Hartt")) {
+    if (summary === 'Tommy Bahamas') {
     city = locationParts[3]
     stateAndZip = locationParts[4]
     stateSplit = stateAndZip.split(" ")
