@@ -6,7 +6,8 @@ module.exports = {
     "./blog/index.html",
     "./email/index.html",
     "./subscribe/index.html",
-    "./contact/index.html"
+    "./contact/index.html",
+    "./videos/index.html"
   ],
   theme: {
     screens: {
