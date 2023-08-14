@@ -41,14 +41,56 @@
     </script>
 
 
+     <!-- Moment.js -->
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js"
+     integrity="sha512-qTXRIMyZIFb8iQcfjXWCO8+M5Tbc38Qi5WzdPOYZHIlZpzBHG3L3by84BBBOiRGiEb7KKtAOAs5qYdUiZiQNNQ=="
+     crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+     <link rel="stylesheet" href="../css/styles.css">
+     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0">
+     <script src="../script.js" defer></script>
+
+
     <link rel="stylesheet" href="../css/styles.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0">
     <script src="../video.js" defer></script>
+
+
+
+    <style>
+        .frame-wrapper {
+          background-color: rgb(0, 0, 0);
+          border: 2px solid black;
+          height: 25vh;
+          width: 100%;
+          overflow-x: scroll;
+          display: flex;
+          align-items: center;
+        }
+
+        .vid-frame {
+            width: 250px;
+        }
+
+        @media only screen and (min-width: 600px) {
+            .vid-frame {
+                width: 500px;
+            }
+
+            .frame-wrapper {
+                height: 30vh;
+            }
+
+        }
+  
+    </style>
+  
+
+
 </head>
 
-<body class="bg-black h-[100vh] relative">
-    <h3 class="text-white text-6xl">Videos</h3>
-    <div class="video-wrapper flex absolute"></div>
-
+<body>
+    <div class="frame-wrapper">
+      <div class="video-wrapper flex"></div>
+    </div>
 </body>
 </html>

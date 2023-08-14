@@ -1,0 +1,6 @@
+User-agnet: *
+User-agent: Googlebot
+User-agent: Googlebot-mobile
+Allow: /
+Disallow: /.well-known
+Sitemap: https://greglucemusic.com/sitemap.xml
