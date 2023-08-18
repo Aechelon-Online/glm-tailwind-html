@@ -13,16 +13,17 @@ videos.forEach(function(item) {
 
 videoPlayer += `
     <div class="video-player">
-            <div class="container w-[250px] tablet:w-[350px] relative">
+            <div class="w-[250px] p-2 mx-2 tablet:w-[350px] flex justify-center items-center bg-no-repeat bg-center" style="background-image: url(${item.thumbnail})">
                 <a href="${item.link}">
-                    <img src="${item.thumbnail}" class="pt-2 px-2 cursor-pointer">
-                    <img src="../images/yt-logo-tp.webp" class="w-[150px] absolute top-[12%] left-[27%]"></img>
-                    </img>
-                </a>
-                <h4 class="text-md p-2 text-white text-center">${item.title}</h4>
+                    <img src="../images/yt-logo-tp.webp" class="w-[150px]"></img>
+                </a>  
             </div>  
+            <h4 class="text-md p-2 text-white text-center">${item.title}</h4>
     </div>
     `
 })
 
 document.querySelector('.video-wrapper').innerHTML = videoPlayer
+
+
+               
