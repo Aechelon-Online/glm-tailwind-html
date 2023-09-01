@@ -3,12 +3,15 @@ module.exports = {
   content: [
     "./src/**/*.{html,js}",
     "./index.html",
+    "./about/index.html",
     "./blog/index.html",
+    "./blog/**/index.html",
     "./email/index.html",
     "./subscribe/index.html",
-    "./contact/index.html",
+    "./contact/*.html",
     "./videos/index.html",
-    "video.js"
+    "./video.js",
+    "./article.js"
   ],
   theme: {
     screens: {
@@ -29,6 +32,6 @@ module.exports = {
     },
   },
   plugins: [
-    
+
   ],
 }
