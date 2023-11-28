@@ -1,14 +1,4 @@
 const dropDown = document.querySelector(".menu")
-const toggleIcon = document.querySelector(".toggle-icon")
-const eventSelect = document.querySelector(".event-select")
-const eventArrow = document.querySelector(".event-arrow")
-const serviceSelect = document.querySelector(".service-select")
-const selectArrow = document.querySelector(".select-arrow")
-const radios = document.querySelector(".event-select")
-const list = document.querySelector(".list")
-const dots = document.querySelector(".selections")
-const checkboxes = document.querySelector(".entertainment-checkboxes")
-const arrowEvent = document.querySelector(".arrow-click")
 const cards = document.querySelectorAll(".fadeIn")
 
 const observer = new IntersectionObserver(entries => {

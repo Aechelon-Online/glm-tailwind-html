@@ -50,8 +50,9 @@
     crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <link rel="stylesheet" href="/css/styles.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0">
-    <script src="script.js" defer></script>
+    <!-- <script src="script.js" defer></script> -->
     <script src="video.js" defer></script>
+    <script src="contact.js" defer></script>
 
 
     <style>
@@ -282,6 +283,117 @@
         </div>
       </div>
     </div>
+
+    <div class="flex justify-center">
+      <div class="w-[700px]">
+          <form class="border-4 border-blue-500 mx-2 rounded" action="https://formsubmit.co/greglucemusic@gmail.com" method="POST">
+              <h3 class="flex p-2 text-center font-bold text-[1.25rem] smallMobile:text-[1.5rem] tablet:text-[2rem]">Questions? Get them answered here.</h3>
+              <div class="smallTablet:flex w-full p-2">
+                  <div class="my-2 w-full">
+                      <label class="px-2 pb-1 pt-3" for="name" required>Name</label>
+                      <div class="col px-2 w-full">
+                          <input class="border-4 border-blue-500 rounded w-full" type="text" name="Name" required>
+                      </div>
+                  </div>
+                  <div class="my-2 w-full">
+                      <label class="px-2 pb-1 pt-3" for="cell-phone" required>Mobile</label>
+                      <div class="col px-2">
+                          <input class="border-4 border-blue-500 rounded w-full" type="text" name="Cell Phone">
+                      </div>
+                  </div>
+                  <div class="my-2 w-full">
+                      <label class="px-2 pb-1 pt-3" for="email" required>Email</label>
+                      <div class="col px-2">
+                          <input class="border-4 border-blue-500 rounded w-full" type="text" name="Email">
+                      </div>
+                  </div>
+              </div>
+              <div class="smallTablet:flex justify-between">
+                  <div class="mx-4 mt-[-8px] smallTablet:mt-0 smallTablet:w-full">
+                      <label class="" for="date-of-event" placeholder="Click for date" required>Date of Event</label>
+                      <div class="border-4 border-blue-500 rounded">
+                      <input type="date" value="" class="w-[100%] px-1.5 text-sm" name="Date Of Event">
+                      </div>
+                  </div>
+                  <div class="smallTablet:mx-0 mx-4 smallTablet:w-full my-2 smallTablet:my-0">
+                      <label class="" for="event-type" required>Event Type</label>
+                      <div class="">
+                          <div class="event-radio-buttons relative">
+                              <input class="border-4 border-blue-500 rounded w-full event-select" type="text" name="Event Selections">
+                              <span class="absolute left-[0.25rem] top-[4px] px-1 event-arrow arrow-click">▼</span>
+                              <div class="selections absolute z-10 hidden bg-white p-2">
+                                  <label for="wedding" class="flex items-center">
+                                      <input type="radio" name="radio-button" id="wedding" class="" value="Wedding">
+                                      <p class="p-1">Wedding</p>
+                                  </label>
+                                  <label for="private-party" class="flex items-center">
+                                      <input type="radio" name="radio-button" id="private-party" class="justify-center items-center">
+                                      <p class="p-1">Private Party</p>
+                                  </label>
+                                  <label for="corporate-event" class="flex items-center">
+                                      <input type="radio" name="radio-button" id="corporate-event" class="">
+                                      <p class="p-1">Corporate Event</p>
+                                  </label>
+                                  <label for="other" class="flex items-center">
+                                  <input type="radio" name="radio-button" id="other" class="">
+                                  <p class="p-1">Other</p>
+                                  </label>
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+                  <div class="mx-4 my-2 smallTablet:my-0 smallTablet:w-full">
+                      <label for="event-location" class="" required>Event City</label>
+                      <div>
+                          <input type="text" class="border-4 border-blue-500 rounded w-full" name="Event Location">
+                      </div>
+                  </div>
+              </div>
+              <div class="multi-selections px-2 mt-2 mx-2">
+                  <label for="entertainment-selections" class="" required>What entertainment elements would you desire?</label>
+                  <div class="entertainment-checkboxes relative">
+                      <input type="text" name="Entertainment Selections" class="border-4 border-blue-500 w-full rounded">
+                      <span class="absolute left-0 px-2 top-[4px] service-select select-arrow">▼</span>
+                  </div>
+                  <div class="list absolute bg-white hidden pl-2">
+                      <label for="omb" class="omb list-items flex items-center">
+                          <input type="checkbox" name="Solo Acoustic" id="solo-acoustic" class="selections">
+                          <p class="picks p-1">Solo Acoustic</p>
+                      </label>
+                      <label for="dj" class="dj list-items flex items-center">
+                          <input type="checkbox" name="DJ" id="list-dj" class="selections">
+                          <p class="picks p-1">DJ</p>
+                      </label>
+                      <label for="mc" class="mc list-items flex items-center">
+                          <input type="checkbox" name="MC" id="list-mc" class="selections">
+                          <p class="picks p-1">Master Of Ceremonies</p>
+                      </label>
+                      <label for="dance-floor-lighting" class="lighting-dance-floor list-items flex items-center">
+                      <input type="checkbox" name="Dance Floor Lights" id="lighting-dance-floor" class="selections">
+                      <p class="picks p-1">Dance Floor Lights</p>
+                      </label>
+                      <label for="uplighting" class="uplighting list-items flex items-center">
+                      <input type="checkbox" name="Uplighting" id="lighting-uplighting" class="selections">
+                      <p class="picks p-1">Uplighting</p>
+                      </label>
+                  </div>
+              </div>
+              <div class="px-2 pt-3 mt-[-4px] flex flex-col mx-2">
+                  <label for="event-vision" class="pb-1" required>What feel do you want for the event?</label>
+                  <input type="text" class="border-4 border-blue-500  rounded" name="Event Vision">
+              </div>
+              <div class="px-2 pt-3 mb-2 mt-[-4px] flex flex-col mx-2">
+                  <label for="search-lead" class="pb-1" required>How did you find us?</label>
+                  <input type="text" class="border-4 border-blue-500  rounded" name="Search Reference">
+              </div>
+              <div class="button-div px-2">
+                  <button class="border-4 border-blue-500 my-4 mx-2 bg-blue-500 rounded">
+                      <p class="pt-1 px-4 mb-1 text-white"><strong>Get quote</strong> <span class="side-arrow pl-2">></span></p>
+                  </button>
+              </div>
+          </form>
+      </div>
+  </div>
 
     <div class="h-[40%] w-full text-[0.625rem] my-4 pb-2">
         <div class="flex justify-center mx-1">

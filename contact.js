@@ -23,8 +23,8 @@ let isDropped = true
 radios.addEventListener('click', () => {
   dots.classList.toggle("hidden")
   isDropped = !isDropped
-  eventArrow.innerText = isDropped ? "▼" : "✕"
-  if(eventSelect.innerText === "✕"){
+  eventArrow.innerText = isDropped ? "▼" : "click here to save"
+  if(eventSelect.innerText === "click here to save"){
       eventSelect.style.margin = "-2px 1px"
   } else {
       eventSelect.style.margin = "0"
@@ -35,8 +35,8 @@ checkboxes.addEventListener('click', () => {
     list.classList.toggle("hidden")
     console.log("clicked")
     isDropped = !isDropped
-    selectArrow.innerText = isDropped ? "▼" : "✕"
-    if(serviceSelect.innerText === "✕"){
+    selectArrow.innerText = isDropped ? "▼" : "click here to save"
+    if(serviceSelect.innerText === "click here to save"){
         serviceSelect.style.margin = "-2px 1px"
     } else {
         serviceSelect.style.margin = "0"
@@ -48,8 +48,8 @@ checkboxes.addEventListener('click', () => {
 arrowEvent.addEventListener('click', () => {
   dots.classList.toggle("hidden")
   isDropped = !isDropped
-  eventArrow.innerText = isDropped ? "▼" : "✕"
-  if(eventSelect.innerText === "✕"){
+  eventArrow.innerText = isDropped ? "▼" : "click here to save"
+  if(eventSelect.innerText === "click here to save"){
       eventSelect.style.margin = "-2px 1px"
   } else {
       eventSelect.style.margin = "0"

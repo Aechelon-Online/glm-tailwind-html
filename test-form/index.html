@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-    <title>Greg Luce Music - Contact Page | Best DFW Wedding DJ | Events DJ | One Man Band</title>
+    <!-- <title>Greg Luce Music - Contact Page | Best DFW Wedding DJ | Events DJ | One Man Band</title>
 
     <meta name="Greg Luce Music Contact Page" content="Greg Luce Music Contact">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -15,14 +15,16 @@
     <meta property="og:locale" content="en_US">
     <meta property="og:site_name" content="Greg Luce Music">
     <meta name="robots" content="follow, index"/>
-    <link rel="canonical" href="https://greglucemusic.com/contact/index.html">
+    <link rel="canonical" href="https://greglucemusic.com/contact/index.html"> -->
 
     <link rel="preconnect" href="https://fonts.googleapis.com"> 
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
  
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;400;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../css/styles.css">
-    <script src="../contact.js" defer></script>
+    <!-- <script src="../contact.js" defer></script> -->
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    <script src="/contact.js" defer></script>
     <style>
         .block {
             display: block;
@@ -33,51 +35,31 @@
     </style>
 </head>
 <body>
-    <div class="relative h-[100px] smallMobile:h-[115px] tablet:h-[140px]">
-        <div class="navbar fixed z-[999] w-full h-[100px] bg-white smallMobile:h-[115px] tablet:h-[140px]">
-            <div class="h-[2.5rem] absolute top-0 w-[100%] bg-blue-900 tablet:h-[3rem]">
-                <p class="text-blue-100 absolute right-0 p-2 pr-[20px] tablet:text-[1.25rem] tablet:top-[3px] tablet:pr-[15px]"><a href="tel:8174870886">817.487.0886</a></p>
-            </div>
-
-            <div class="logo-title absolute left-5 top-[3.75rem] flex items-center justify-between tablet:top-[4.25rem]">
-                <a href="/"><img src="../images/glm-black.png" class="w-[3rem] smallMobile:w-[4rem] tablet:w-[6rem]" /></a>
-                <h4 class="text-[0.875rem] smallMobile:text-xl px-3 tablet:text-2xl">Greg Luce Music</h4>
-            </div>
-            <div class="absolute hidden menu tablet:block max-w-[200px] tablet:max-w-full top-[6rem] smallMobile:top-[7rem] right-0 tablet:right-5 w-[40%] lg:max-w-sm tablet:top-[4.875rem]">
-                <ul class="tablet:w-full tablet:flex tablet:text-xl justify-between items-center">
-                    <li class="p-2 bg-white text-center smallMobile:text-[1.25rem] tablet:p-0"><a href="../about/index.html">About</a></li>
-                    <li class="p-2 bg-white text-center smallMobile:text-[1.25rem] tablet:p-0"><a href="../blog/index.html">Blog</a></li>
-                    <li class="p-2 bg-white text-center smallMobile:text-[1.25rem] tablet:p-0"><a href="../pricing/index.html">Pricing</a></li>
-                    <li class="p-2 bg-white text-center smallMobile:text-[1.25rem] tablet:p-0"><a href="../contact/index.html">Contact</a></li>
-                </ul>
-            </div>
-            <img src="/images/menu.png" onclick="handleNav()" class="toggle-icon w-[1.5rem] absolute tablet:hidden z-[99] top-[3.625rem] smallMobile:w-[2rem] smallMobile:top-[3.75rem] right-5 text-red-600">
-        </div>
-    </div>
+   
     <h1 class="text-3xl text-center p-[1rem] tablet:p-[2rem] mobile:text-4xl tablet:text-6xl">Contact</h1>
 
 
     <div class="flex justify-center">
         <div class="w-[700px]">
-            <form class="border-4 border-blue-500 mx-2 rounded" action="https://formsubmit.co/greglucemusic@gmail.com" method="POST">
+            <div class="border-4 border-blue-500 mx-2 rounded">
                 <h3 class="flex p-2 text-center font-bold text-[1.25rem] smallMobile:text-[1.5rem] tablet:text-[2rem]">Questions? Get them answered here.</h3>
                 <div class="smallTablet:flex w-full p-2">
                     <div class="my-2 w-full">
                         <label class="px-2 pb-1 pt-3" for="name" required>Name</label>
                         <div class="col px-2 w-full">
-                            <input class="border-4 border-blue-500 rounded w-full" type="text" name="Name" required>
+                            <input class="border-4 border-blue-500 rounded w-full" type="text" id="name" required>
                         </div>
                     </div>
                     <div class="my-2 w-full">
-                        <label class="px-2 pb-1 pt-3" for="cell-phone" required>Mobile</label>
+                        <label class="px-2 pb-1 pt-3" for="phone" required>Mobile</label>
                         <div class="col px-2">
-                            <input class="border-4 border-blue-500 rounded w-full" type="text" name="Cell Phone">
+                            <input class="border-4 border-blue-500 rounded w-full" type="text" id="phone">
                         </div>
                     </div>
                     <div class="my-2 w-full">
                         <label class="px-2 pb-1 pt-3" for="email" required>Email</label>
                         <div class="col px-2">
-                            <input class="border-4 border-blue-500 rounded w-full" type="text" name="Email">
+                            <input class="border-4 border-blue-500 rounded w-full" type="text" id="email">
                         </div>
                     </div>
                 </div>
@@ -85,14 +67,14 @@
                     <div class="mx-4 mt-[-8px] smallTablet:mt-0 smallTablet:w-full">
                         <label class="" for="date-of-event" placeholder="Click for date" required>Date of Event</label>
                         <div class="border-4 border-blue-500 rounded">
-                        <input type="date" value="" class="w-[100%] px-1.5 text-sm" name="Date Of Event">
+                        <input class="w-[100%] px-1.5 text-sm" type="date" id="date">
                         </div>
                     </div>
                     <div class="smallTablet:mx-0 mx-4 smallTablet:w-full my-2 smallTablet:my-0">
                         <label class="" for="event-type" required>Event Type</label>
                         <div class="">
                             <div class="event-radio-buttons relative">
-                                <input class="border-4 border-blue-500 rounded w-full event-select" type="text" name="Event Selections">
+                                <input class="border-4 border-blue-500 rounded w-full event-select" type="text" name="Event Selections" id="event">
                                 <span class="absolute left-[0.25rem] top-[4px] px-1 event-arrow arrow-click">▼</span>
                                 <div class="selections absolute z-10 hidden bg-white p-2">
                                     <label for="wedding" class="flex items-center">
@@ -115,7 +97,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="mx-4 my-2 smallTablet:my-0 smallTablet:w-full">
+                    <!-- <div class="mx-4 my-2 smallTablet:my-0 smallTablet:w-full">
                         <label for="event-location" class="" required>Event City</label>
                         <div>
                             <input type="text" class="border-4 border-blue-500 rounded w-full" name="Event Location">
@@ -158,21 +140,49 @@
                 <div class="px-2 pt-3 mb-2 mt-[-4px] flex flex-col mx-2">
                     <label for="search-lead" class="pb-1" required>How did you find us?</label>
                     <input type="text" class="border-4 border-blue-500  rounded" name="Search Reference">
-                </div>
+                </div> -->
                 <div class="button-div px-2">
-                    <button class="border-4 border-blue-500 my-4 mx-2 bg-blue-500 rounded">
+                    <button class="border-4 border-blue-500 my-4 mx-2 bg-blue-500 rounded" onclick="sendEmail();">
                         <p class="pt-1 px-4 mb-1 text-white"><strong>Get quote</strong> <span class="side-arrow pl-2">></span></p>
                     </button>
                 </div>
-            </form>
+            </div>
         </div>
     </div>
+
+    <script>
+        function sendEmail() {
+            (function(){
+                emailjs.init("LHeYpvIwHtASL6MtL")
+            }
+            )();
+
+            var params = {
+                name: document.querySelector("#name").value,
+                phone: document.querySelector("#phone").value,
+                email: document.querySelector("#email").value,
+                date: document.querySelector("#date").value,
+                event: document.querySelector("#event").value
+            };
+
+            var serviceID="service_irxad4n"
+            var templateID="template_s5bx08r"
+
+            emailjs.send(serviceID, templateID, params)
+            .then( res => {
+                alert("Email Sent Successfully!")
+            })
+            .catch()
+        }
+    </script>
 
     <div>
         <p class="text-center pt-4 text-sm font-bold">© 2023 Greg Luce Music</p>
         <p class="text-center text-white text-sm font-bold">9433 Tierra Verde Drive, Fort Worth, Texas 76177</p>
         <p class="text-center text-white text-sm font-bold">(817)487-0886</p>
     </div>
-    <script type='text/javascript' src='//s3.amazonaws.com/downloads.mailchimp.com/js/mc-validate.js'></script>
 </body>
 </html>
+
+
+<!-- action="https://formsubmit.co/greglucemusic@gmail.com" method="POST" -->
