@@ -20,3 +20,17 @@ blogs.forEach(function(blog) {
 })
 
 document.querySelector(".blogs").innerHTML = page
+
+// const observer = new IntersectionObserver(entries => {
+//     entries.forEach((entry, i) => {
+//       setTimeout(() => {
+//         entry.target.classList.toggle("show", entry.isIntersecting)
+//       }, i * 250)
+//     })
+//   }, {
+//     threshold: 0.5,
+//   })
+  
+//   cards.forEach(card => {
+//     observer.observe(card)
+//   })
