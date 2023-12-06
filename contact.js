@@ -1,14 +1,11 @@
 const dropDown = document.querySelector(".menu")
 const toggleIcon = document.querySelector(".toggle-icon")
-const eventSelect = document.querySelector(".event-select")
-const eventArrow = document.querySelector(".event-arrow")
-const serviceSelect = document.querySelector(".service-select")
-const selectArrow = document.querySelector(".select-arrow")
-const radios = document.querySelector(".event-select")
+const checkSelect = document.querySelector("#checkSelect")
+const elements = document.querySelector("#picks")
 const list = document.querySelector(".list")
-const dots = document.querySelector(".selections")
-const checkboxes = document.querySelector(".entertainment-checkboxes")
-const arrowEvent = document.querySelector(".arrow-click")
+const saveSelections = document.querySelector("#saveSelections")
+        
+
 
 let isOpen = false
 
@@ -18,43 +15,59 @@ function handleNav() {
     toggleIcon.src = isOpen ?  "/images/cancel.png" : "/images/menu.png" 
 }
 
-let isDropped = true
+// New Contact From JS through EmailJS
 
-radios.addEventListener('click', () => {
-  dots.classList.toggle("hidden")
-  isDropped = !isDropped
-  eventArrow.innerText = isDropped ? "▼" : "click here to save"
-  if(eventSelect.innerText === "click here to save"){
-      eventSelect.style.margin = "-2px 1px"
-  } else {
-      eventSelect.style.margin = "0"
-  }
-})
+let values = []
+        checkSelect.addEventListener('click', () => {
+           
+          list.classList.remove("hidden")
+            
+        })
 
-checkboxes.addEventListener('click', () => {
-    list.classList.toggle("hidden")
-    console.log("clicked")
-    isDropped = !isDropped
-    selectArrow.innerText = isDropped ? "▼" : "click here to save"
-    if(serviceSelect.innerText === "click here to save"){
-        serviceSelect.style.margin = "-2px 1px"
-    } else {
-        serviceSelect.style.margin = "0"
-    }
-})
+        saveSelections.addEventListener('click', () =>{
+            const checkboxes = document.getElementsByName('selection')
+            for(let i=0; i < checkboxes.length; i++){
+                if(checkboxes[i].checked == true){
+                    values.push(checkboxes[i].value)
+                } else {
+                    values = values.filter(id => id !== checkboxes[i].value)
+                }
+            }
+            elements.innerText = (Array.from(new Set(values)).join(", "))
+            list.classList.add("hidden")
+            console.log(elements.innerText)
+        })
 
 
+        function sendEmail() {
+            (function(){
+                emailjs.init("LHeYpvIwHtASL6MtL")
+            }
+            )();
 
-arrowEvent.addEventListener('click', () => {
-  dots.classList.toggle("hidden")
-  isDropped = !isDropped
-  eventArrow.innerText = isDropped ? "▼" : "click here to save"
-  if(eventSelect.innerText === "click here to save"){
-      eventSelect.style.margin = "-2px 1px"
-  } else {
-      eventSelect.style.margin = "0"
-  }
-})
+            var params = {
+                name: document.querySelector("#name").value,
+                phone: document.querySelector("#phone").value,
+                email: document.querySelector("#email").value,
+                date: document.querySelector("#date").value,
+                event: document.querySelector("#event").value,
+                location: document.querySelector("#location").value,
+                selections: document.querySelector("#picks").innerText,
+                eventFeel: document.querySelector("#eventFeel").value,
+                searchType: document.querySelector("#searchType").value
+            };
+
+            var serviceID="service_irxad4n"
+            var templateID="template_s5bx08r"
+
+            emailjs.send(serviceID, templateID, params)
+            .then( res => {
+                alert("Thanks for your info! We will be in touch soon.")
+            })
+            .catch()
+        }
+
+
  
   // Calendar API JS
   

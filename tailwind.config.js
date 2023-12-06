@@ -11,7 +11,9 @@ module.exports = {
     "./contact/*.html",
     "./videos/index.html",
     "./video.js",
-    "./article.js"
+    "./article.js",
+    "./test-form/index.html",
+    "./pricing-test/index.html"
   ],
   theme: {
     screens: {

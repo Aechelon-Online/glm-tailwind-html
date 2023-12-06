@@ -5,8 +5,7 @@ const eventArrow = document.querySelector(".event-arrow")
 const serviceSelect = document.querySelector(".service-select")
 const selectArrow = document.querySelector(".select-arrow")
 const list = document.querySelector(".list")
-const dots = document.querySelector(".selections")
-const checkboxes = document.querySelector(".entertainment-checkboxes")
+const checkboxDropDown = document.querySelector(".checkboxes")
 
 let isOpen = false
 
@@ -16,22 +15,6 @@ function handleNav() {
     toggleIcon.src = isOpen ?  "/images/cancel.png" : "/images/menu.png" 
 }
 
-// let isDropped = true
-
-// radios.addEventListener('click', () => {
-//   dots.classList.toggle("hidden")
-//   isDropped = !isDropped
-//   eventArrow.innerText = isDropped ? "▼" : "click here to save"
-//   if(eventSelect.innerText === "click here to save"){
-//       eventSelect.style.margin = "-2px 1px"
-//   } else {
-//       eventSelect.style.margin = "0"
-//   }
-// })
-
-checkboxes.addEventListener('click', () => {
-    list.classList.toggle("hidden")
-})
 
 
 
