@@ -1,5 +1,6 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
+ 
   content: [
     "./src/**/*.{html,js}",
     "./index.html",
@@ -13,7 +14,24 @@ module.exports = {
     "./video.js",
     "./article.js",
     "./test-form/index.html",
-    "./pricing-test/index.html"
+    "./pricing-test/index.html",
+    "./colleyville/**/**/index.html",
+    "./dallas/**/**/index.html",
+    "./flower-mound/**/**/index.html",
+    "./frisco/**/**/index.html",
+    "./grapevine/**/**/index.html",
+    "./highland-park/**/**/index.html",
+    "./highland-village/**/**/index.html",
+    "./keller/**/**/index.html",
+    "./las-colinas/**/**/index.html",
+    "./mansfield/**/**/index.html",
+    "./mckinney/**/**/index.html",
+    "./plano/**/**/index.html",
+    "./prosper/**/**/index.html",
+    "./roanoke/**/**/index.html",
+    "./southlake/**/**/index.html",
+    "./university-park/**/**/index.html",
+    "./westlake/**/**/index.html",
   ],
   theme: {
     screens: {
