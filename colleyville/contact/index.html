@@ -19,9 +19,9 @@
 
     <link rel="preconnect" href="https://fonts.googleapis.com"> 
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
- 
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;400;600&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="../../css/styles.css">
+    <link rel="stylesheet" href="/css/styles.css">
     <script src="/contact.js" defer></script>
     <style>
         .block {
@@ -40,7 +40,7 @@
             </div>
 
             <div class="logo-title absolute left-5 top-[3.75rem] flex items-center justify-between tablet:top-[4.25rem]">
-                <a href="/"><img src="../../images/glm-black.png" class="w-[3rem] smallMobile:w-[4rem] tablet:w-[6rem]" /></a>
+                <a href="/"><img src="/images/glm-black.png" class="w-[3rem] smallMobile:w-[4rem] tablet:w-[6rem]" /></a>
                 <h4 class="text-[0.875rem] smallMobile:text-xl px-3 tablet:text-2xl">Greg Luce Music</h4>
             </div>
             <div class="absolute hidden menu tablet:block max-w-[200px] tablet:max-w-full top-[6rem] smallMobile:top-[7rem] right-0 tablet:right-5 w-[40%] lg:max-w-sm tablet:top-[4.875rem]">
@@ -59,112 +59,103 @@
 
     <div class="flex justify-center">
         <div class="w-[700px]">
-            <form class="border-4 border-blue-300 mx-2 rounded" action="https://formsubmit.co/greglucemusic@gmail.com" method="POST">
-                <h3 class="flex p-2 text-center font-bold text-[1.25rem] smallMobile:text-[1.5rem] tablet:text-[2rem]">Questions? Get them answered here.</h3>
+            <div class="border-4 border-blue-700 mx-2 rounded">
+                <h2 class="flex p-2 text-center font-bold text-[1.25rem] smallMobile:text-[1.5rem] tablet:text-[2rem]">Questions? Get them answered here.</h2>
                 <div class="smallTablet:flex w-full p-2">
                     <div class="my-2 w-full">
                         <label class="px-2 pb-1 pt-3" for="name" required>Name</label>
                         <div class="col px-2 w-full">
-                            <input class="border-4 border-blue-300 rounded w-full" type="text" name="Name" required>
+                            <input class="border-4 border-blue-700 rounded w-full" type="text" id="name" required>
                         </div>
                     </div>
                     <div class="my-2 w-full">
-                        <label class="px-2 pb-1 pt-3" for="cell-phone" required>Mobile</label>
+                        <label class="px-2 pb-1 pt-3" for="phone" required>Mobile</label>
                         <div class="col px-2">
-                            <input class="border-4 border-blue-300 rounded w-full" type="text" name="Cell Phone">
+                            <input class="border-4 border-blue-700 rounded w-full" type="text" id="phone">
                         </div>
                     </div>
                     <div class="my-2 w-full">
                         <label class="px-2 pb-1 pt-3" for="email" required>Email</label>
                         <div class="col px-2">
-                            <input class="border-4 border-blue-300 rounded w-full" type="text" name="Email">
+                            <input class="border-4 border-blue-700 rounded w-full" type="email" id="email">
                         </div>
                     </div>
                 </div>
                 <div class="smallTablet:flex justify-between">
                     <div class="mx-4 mt-[-8px] smallTablet:mt-0 smallTablet:w-full">
-                        <label class="" for="date-of-event" placeholder="Click for date" required>Date of Event</label>
-                        <div class="border-4 border-blue-300 rounded">
-                        <input type="date" value="" class="w-[100%] px-1.5 text-sm" name="Date Of Event">
+                        <label class="" for="date" placeholder="Click for date" required>Date of Event</label>
+                        <div class="border-4 border-blue-700 rounded">
+                        <input class="w-[100%] px-1.5 text-sm" type="date" id="date">
                         </div>
                     </div>
                     <div class="smallTablet:mx-0 mx-4 smallTablet:w-full my-2 smallTablet:my-0">
-                        <label class="" for="event-type" required>Event Type</label>
+                        <label class="" for="event" required>Event Type</label>
                         <div class="">
-                            <div class="event-radio-buttons relative">
-                                <input class="border-4 border-blue-300 rounded w-full event-select" type="text" name="Event Selections">
-                                <span class="absolute left-[0.25rem] top-[4px] px-1 event-arrow arrow-click">▼</span>
-                                <div class="selections absolute z-10 hidden bg-white p-2">
-                                    <label for="wedding" class="flex items-center">
-                                        <input type="radio" name="wedding" id="wedding" class="" value="Wedding">
-                                        <p class="p-1">Wedding</p>
-                                    </label>
-                                    <label for="private-party" class="flex items-center">
-                                        <input type="radio" name="private party" id="private-party" class="justify-center items-center">
-                                        <p class="p-1">Private Party</p>
-                                    </label>
-                                    <label for="corporate-event" class="flex items-center">
-                                        <input type="radio" name="corporate event" id="corporate-event" class="">
-                                        <p class="p-1">Corporate Event</p>
-                                    </label>
-                                    <label for="other" class="flex items-center">
-                                    <input type="radio" name="other" id="other" class="">
-                                    <p class="p-1">Other</p>
-                                    </label>
-                                </div>
+                            <div class="event-radio-buttons">
+                                <select class="border-4 border-blue-700 rounded w-full event-select" id="event">
+                                    <option value=""></option>
+                                    <option value="Wedding">Wedding</option>
+                                    <option value="Private Party">Private Party</option>
+                                    <option value="Corporate Event">Corporate Event</option>
+                                    <option value="Other">Other</option>
+                                </select>
                             </div>
                         </div>
                     </div>
                     <div class="mx-4 my-2 smallTablet:my-0 smallTablet:w-full">
-                        <label for="event-location" class="" required>Event Location</label>
-                        <div>
-                            <input type="text" class="border-4 border-blue-300 rounded w-full" name="Event Location">
+                        <label class="pb-1 pt-3" for="location">Event City</label>
+                        <div class="col">
+                            <input class="border-4 border-blue-700 rounded w-full" type="text" id="location">
                         </div>
+                        
                     </div>
                 </div>
-                <div class="multi-selections px-2 mt-2 mx-2">
-                    <label for="entertainment-selections" class="" required>What entertainment elements would you desire?</label>
-                    <div class="entertainment-checkboxes relative">
-                        <input type="text" name="Entertainment Selections" class="border-4 border-blue-300 w-full rounded">
-                        <span class="absolute left-0 px-2 top-[4px] service-select select-arrow">▼</span>
+                <div class="pt-4 smallTablet:pt-2">
+                    <div class="mx-4">
+                    <label for="entertainment-selections" for="picks" required>What entertainment elements would you desire?</label>
                     </div>
-                    <div class="list absolute bg-white hidden pl-2">
+                    <div class="multi-selections mx-4 border-blue-700 border-4 rounded h-[30px]" id="checkSelect">
+                        <p class="pl-1 absolute" id="picks"></p>
+                    </div>
+                    <div class="list bg-white hidden absolute text-[1rem] pl-6">
+                        
                         <label for="omb" class="omb list-items flex items-center">
-                            <input type="checkbox" name="Solo Acoustic" id="solo-acoustic" class="selections">
-                            <p class="picks p-1">Solo Acoustic</p>
+                            <input type="checkbox" name="selection" value="Solo Acoustic" id="soloacoustic" class="selections">
+                            <p class="p-1">Solo Acoustic</p>
                         </label>
                         <label for="dj" class="dj list-items flex items-center">
-                            <input type="checkbox" name="DJ" id="list-dj" class="selections">
-                            <p class="picks p-1">DJ</p>
+                            <input type="checkbox" name="selection" value="DJ" id="dj" class="selections">
+                            <p class="p-1">DJ</p>
                         </label>
                         <label for="mc" class="mc list-items flex items-center">
-                            <input type="checkbox" name="MC" id="list-mc" class="selections">
-                            <p class="picks p-1">Master Of Ceremonies</p>
+                            <input type="checkbox" name="selection" value="MC" id="mc" class="selections">
+                            <p class="p-1">Master Of Ceremonies</p>
                         </label>
                         <label for="dance-floor-lighting" class="lighting-dance-floor list-items flex items-center">
-                        <input type="checkbox" name="Dance Floor Lights" id="lighting-dance-floor" class="selections">
-                        <p class="picks p-1">Dance Floor Lights</p>
+                        <input type="checkbox" name="selection" value="Dance Floor Lights" id="danceFloorLighting" class="selections">
+                        <p class="p-1">Dance Floor Lights</p>
                         </label>
                         <label for="uplighting" class="uplighting list-items flex items-center">
-                        <input type="checkbox" name="Uplighting" id="lighting-uplighting" class="selections">
-                        <p class="picks p-1">Uplighting</p>
+                        <input type="checkbox" name="selection" value="Uplighting" id="uplighting" class="selections">
+                        <p class="p-1">Uplighting</p>
                         </label>
+                        <button class="py-1 px-2 bg-blue-700 text-white rounded" id="saveSelections">Save Selections</button>
                     </div>
                 </div>
                 <div class="px-2 pt-3 mt-[-4px] flex flex-col mx-2">
-                    <label for="event-vision" class="pb-1" required>What feel do you want for the event?</label>
-                    <input type="text" class="border-4 border-blue-300  rounded" name="Event Vision">
+                    <label for="eventFeel" class="pb-1">What feel do you want for the event?</label>
+                    <input type="text" class="border-4 border-blue-700  rounded" name="Event Vision" id="eventFeel">
                 </div>
                 <div class="px-2 pt-3 mb-2 mt-[-4px] flex flex-col mx-2">
-                    <label for="search-lead" class="pb-1" required>How did you find us?</label>
-                    <input type="text" class="border-4 border-blue-300  rounded" name="Search Reference">
+                    <label for="searchType" class="pb-1" required>How did you find us?</label>
+                    <input type="text" class="border-4 border-blue-700  rounded" name="Search Reference" id="searchType">
                 </div>
                 <div class="button-div px-2">
-                    <button class="border-4 border-blue-300 my-4 mx-2 bg-blue-300 rounded">
-                        <p class="pt-1 px-4 mb-1"><strong>Get quote</strong> <span class="side-arrow pl-2">></span></p>
+                    <button class="border-4 border-blue-700 my-4 mx-2 bg-blue-700 rounded" onclick="sendEmail();">
+                        <p class="pt-1 px-4 mb-1 text-white"><strong>Get quote</strong> <span class="side-arrow pl-2">></span></p>
                     </button>
                 </div>
-            </form>
+            </div>
         </div>
     </div>
 

@@ -130,119 +130,66 @@
     <div class="blog-posts w-full p-2 underline article-wrapper items-center h-[150px]tablet:h-[200px]"></div>
 </div>
 
-<div class="flex justify-center p-4">
-    <div class="w-[700px]">
-        <form class="border-4 border-blue-300 mx-2 rounded" action="https://formsubmit.co/greglucemusic@gmail.com" method="POST">
-            <h3 class="flex p-2 text-center font-bold text-[1.25rem] smallMobile:text-[1.5rem] tablet:text-[2rem]">Questions? Get them answered here.</h3>
-            <div class="smallTablet:flex w-full p-2">
-                <div class="my-2 w-full">
-                    <label class="px-2 pb-1 pt-3" for="name" required>Name</label>
-                    <div class="col px-2 w-full">
-                        <input class="border-4 border-blue-300 rounded w-full" type="text" name="Name" required>
-                    </div>
-                </div>
-                <div class="my-2 w-full">
-                    <label class="px-2 pb-1 pt-3" for="cell-phone" required>Mobile</label>
-                    <div class="col px-2">
-                        <input class="border-4 border-blue-300 rounded w-full" type="text" name="Cell Phone">
-                    </div>
-                </div>
-                <div class="my-2 w-full">
-                    <label class="px-2 pb-1 pt-3" for="email" required>Email</label>
-                    <div class="col px-2">
-                        <input class="border-4 border-blue-300 rounded w-full" type="text" name="Email">
-                    </div>
-                </div>
-            </div>
-            <div class="smallTablet:flex justify-between">
-                <div class="mx-4 mt-[-8px] smallTablet:mt-0 smallTablet:w-full">
-                    <label class="" for="date-of-event" placeholder="Click for date" required>Date of Event</label>
-                    <div class="border-4 border-blue-300 rounded">
-                    <input type="date" value="" class="w-[100%] px-1.5 text-sm" name="Date Of Event">
-                    </div>
-                </div>
-                <div class="smallTablet:mx-0 mx-4 smallTablet:w-full my-2 smallTablet:my-0">
-                    <label class="" for="event-type" required>Event Type</label>
-                    <div class="">
-                        <div class="event-radio-buttons relative">
-                            <input class="border-4 border-blue-300 rounded w-full event-select" type="text" name="Event Selections">
-                            <span class="absolute left-[0.25rem] top-[4px] px-1 event-arrow arrow-click">▼</span>
-                            <div class="selections absolute z-10 hidden bg-white p-2">
-                                <label for="wedding" class="flex items-center">
-                                    <input type="radio" name="wedding" id="wedding" class="" value="Wedding">
-                                    <p class="p-1">Wedding</p>
-                                </label>
-                                <label for="private-party" class="flex items-center">
-                                    <input type="radio" name="private party" id="private-party" class="justify-center items-center">
-                                    <p class="p-1">Private Party</p>
-                                </label>
-                                <label for="corporate-event" class="flex items-center">
-                                    <input type="radio" name="corporate event" id="corporate-event" class="">
-                                    <p class="p-1">Corporate Event</p>
-                                </label>
-                                <label for="other" class="flex items-center">
-                                <input type="radio" name="other" id="other" class="">
-                                <p class="p-1">Other</p>
-                                </label>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="mx-4 my-2 smallTablet:my-0 smallTablet:w-full">
-                    <label for="event-location" class="" required>Event Location</label>
-                    <div>
-                        <input type="text" class="border-4 border-blue-300 rounded w-full" name="Event Location">
-                    </div>
-                </div>
-            </div>
-            <div class="multi-selections px-2 mt-2 mx-2">
-                <label for="entertainment-selections" class="" required>What entertainment elements would you desire?</label>
-                <div class="entertainment-checkboxes relative">
-                    <input type="text" name="Entertainment Selections" class="border-4 border-blue-300 w-full rounded">
-                    <span class="absolute left-0 px-2 top-[4px] service-select select-arrow">▼</span>
-                </div>
-                <div class="list absolute bg-white hidden pl-2">
-                    <label for="omb" class="omb list-items flex items-center">
-                        <input type="checkbox" name="Solo Acoustic" id="solo-acoustic" class="selections">
-                        <p class="picks p-1">Solo Acoustic</p>
-                    </label>
-                    <label for="dj" class="dj list-items flex items-center">
-                        <input type="checkbox" name="DJ" id="list-dj" class="selections">
-                        <p class="picks p-1">DJ</p>
-                    </label>
-                    <label for="mc" class="mc list-items flex items-center">
-                        <input type="checkbox" name="MC" id="list-mc" class="selections">
-                        <p class="picks p-1">Master Of Ceremonies</p>
-                    </label>
-                    <label for="dance-floor-lighting" class="lighting-dance-floor list-items flex items-center">
-                    <input type="checkbox" name="Dance Floor Lights" id="lighting-dance-floor" class="selections">
-                    <p class="picks p-1">Dance Floor Lights</p>
-                    </label>
-                    <label for="uplighting" class="uplighting list-items flex items-center">
-                    <input type="checkbox" name="Uplighting" id="lighting-uplighting" class="selections">
-                    <p class="picks p-1">Uplighting</p>
-                    </label>
-                </div>
-            </div>
-            <div class="px-2 pt-3 mt-[-4px] flex flex-col mx-2">
-                <label for="event-vision" class="pb-1" required>What feel do you want for the event?</label>
-                <input type="text" class="border-4 border-blue-300  rounded" name="Event Vision">
-            </div>
-            <div class="px-2 pt-3 mb-2 mt-[-4px] flex flex-col mx-2">
-                <label for="search-lead" class="pb-1" required>How did you find us?</label>
-                <input type="text" class="border-4 border-blue-300  rounded" name="Search Reference">
-            </div>
-            <div class="button-div px-2">
-                <button class="border-4 border-blue-300 my-4 mx-2 bg-blue-300 rounded">
-                    <p class="pt-1 px-4 mb-1"><strong>Get quote</strong> <span class="side-arrow pl-2">></span></p>
-                </button>
-            </div>
-        </form>
-        <p class="text-center pt-4 text-sm font-bold">© 2023 Greg Luce Music</p>
-        <p class="text-center text-white text-sm font-bold">9433 Tierra Verde Drive, Fort Worth, Texas 76177</p>
-        <p class="text-center text-white text-sm font-bold">(817)487-0886</p>
-    </div>
+<div class="flex-col mb-[2rem]">
+    <h3 class="text-[2rem] pt-5 pl-5">Blogs</h3>
+      <div class="w-full p-2 underline items-center">
+        <div class="flex items-center px-2 mx-2">
+          <h2 class="text-[0.75rem] tablet:text-[1rem] desktop:text-[1.25rem] text-center px-2"><a href="https://greglucemusic.com/prosper/blog/hiring-a-corporate-holiday-party-dj-prosper/index.html">Choosing a Corporate Holiday Party DJ</a></h2>
+        </div>
+        <div class="flex items-center px-2 mx-2">
+          <h2 class="text-[0.75rem] tablet:text-[1rem] desktop:text-[1.25rem] text-center px-2"><a href="https://greglucemusic.com/prosper/blog/ultimate-party-vibes-best-prosper-dj/index.html">Ultimate Party DJ Vibes</a></h2>
+        </div>
+        <div class="flex items-center px-2 mx-2">
+          <h2 class="text-[0.75rem] tablet:text-[1rem] desktop:text-[1.25rem] text-center px-2"><a href="https://greglucemusic.com/prosper/blog/prosper-dj-for-hire/index.html">The Key To A Successful Celebration</a></h2>
+        </div>
+        <div class="flex items-center px-2 mx-2">
+          <h2 class="text-[0.75rem] tablet:text-[1rem] desktop:text-[1.25rem] text-center px-2"><a href="https://greglucemusic.com/prosper/blog/wedding-dj-cost-in-prosper/index.html">Wedding DJ Cost</a></h2>
+        </div>
+        <div class="flex items-center px-2 mx-2">
+          <h2 class="text-[0.75rem] tablet:text-[1rem] desktop:text-[1.25rem] text-center px-2"><a href="https://greglucemusic.com/prosper/blog/hottest-party-prosper-best-dj/index.html">How To Have The Hottest Party</a></h2>
+        </div>
+        <div class="flex items-center px-2 mx-2">
+          <h2 class="text-[0.75rem] tablet:text-[1rem] desktop:text-[1.25rem] text-center px-2"><a href="https://greglucemusic.com/prosper/blog/private-event-dj-services-prosper/index.html">Party Perfection in DFW</a></h2>
+        </div>
+        <div class="flex items-center px-2 mx-2">
+          <h2 class="text-[0.75rem] tablet:text-[1rem] desktop:text-[1.25rem] text-center px-2"><a href="https://greglucemusic.com/prosper/blog/this-one-thing-can-make-or-break-your-wedding-choosing-your-perfect-prosper-dj/index.html">The One Thing To Make Or Break Your Wedding Reception</a></h2>
+        </div>
+        <div class="flex items-center px-2 mx-2">
+          <h2 class="text-[0.75rem] tablet:text-[1rem] desktop:text-[1.25rem] text-center px-2"><a href="https://greglucemusic.com/prosper/blog/discover-the-coolest-djs-near-me-in-prosper/index.html">Discovering the Coolest DJs Near Me</a></h2>
+        </div>
+        <div class="flex items-center px-2 mx-2">
+          <h2 class="text-[0.75rem] tablet:text-[1rem] desktop:text-[1.25rem] text-center px-2"><a href="https://greglucemusic.com/prosper/blog/event-dj-for-corporate-wedding-or-party-event-in-prosper/index.html">Corporate Groove: DJing Tips for Professional Events</a></h2>
+        </div>
+        <div class="flex items-center px-2 mx-2">
+          <h2 class="text-[0.75rem] tablet:text-[1rem] desktop:text-[1.25rem] text-center px-2"><a href="https://greglucemusic.com/prosper/blog/party-perfection-in-prosper-why-your-event-needs-the-right-dj/index.html">Party Perfection in Fort Worth: Why Your Event Needs the Right DJ</a></h2>
+        </div>
+        <div class="flex items-center px-2 mx-2">
+          <h2 class="text-[0.75rem] tablet:text-[1rem] desktop:text-[1.25rem] text-center px-2"><a href="https://greglucemusic.com/prosper/blog/the-ultimate-guide-to-best-dj-lighting-for-events-in-prosper/index.html">Illuminate Your Event: The Ultimate Guide to DJ Lighting Perfection in Prosper</a></h2>
+        </div>
+        <div class="flex items-center px-2 mx-2">
+          <h2 class="text-[0.75rem] tablet:text-[1rem] desktop:text-[1.25rem] text-center px-2"><a href="https://greglucemusic.com/prosper/blog/successful-event-dj-marketing-for-corporate-gigs-in-prosper/index.html">Setting the Stage: Unveiling the Secrets of Successful Event DJ Marketing</a></h2>
+        </div>
+        <div class="flex items-center px-2 mx-2">
+          <h2 class="text-[0.75rem] tablet:text-[1rem] desktop:text-[1.25rem] text-center px-2"><a href="https://greglucemusic.com/prosper/blog/a-guide-for-event-djs-for-social-media-mastery-prosper/index.html">Spinning Success: A Guide to Event DJing and Social Media Mastery - Prosper</a></h2>
+        </div>
+        <div class="flex items-center px-2 mx-2">
+          <h2 class="text-[0.75rem] tablet:text-[1rem] desktop:text-[1.25rem] text-center px-2"><a href="https://greglucemusic.com/prosper/blog/how-to-find-a-wedding-dj-near-me-in-prosper/index.html">DJ Needed! - How To Find a Wedding DJ Near Me in Prosper</a></h2>
+        </div>
+        <div class="flex items-center px-2 mx-2">
+          <h2 class="text-[0.75rem] tablet:text-[1rem] desktop:text-[1.25rem] text-center px-2"><a href="https://greglucemusic.com/prosper/blog/unleashing-the-party-with-a-party-dj-your-guide-to-an-epic-celebration-in-prosper/index.html">Unleashing the Party with a Party DJ: Your Guide to an Epic Celebration in Prosper</a></h2>
+        </div>
+        <div class="flex items-center px-2 mx-2">
+          <h2 class="text-[0.75rem] tablet:text-[1rem] desktop:text-[1.25rem] text-center px-2"><a href="https://greglucemusic.com/prosper/blog/5-reasons-not-to-hire-a-wedding-dj-in-prosper/index.html">5 Dubious Reasons to Subject Your Wedding Guests to a DJ in Prosper</a></h2>
+        </div>
+        <div class="flex items-center px-2 mx-2">
+          <h2 class="text-[0.75rem] tablet:text-[1rem] desktop:text-[1.25rem] text-center px-2"><a href="https://greglucemusic.com/prosper/blog/why-you-should-consider-a-solo-musician-dj-combo-for-your-event-in-prosper/index.html">Unleashing the Power of Solo Musician and DJ Fusion in Prosper!</a></h2>
+        </div>
+      </div>
 </div>
+
+<p class="text-center pt-4 text-sm font-bold">© 2023 Greg Luce Music</p>
+<p class="text-center text-white text-sm font-bold">9433 Tierra Verde Drive, Fort Worth, Texas 76177</p>
+<p class="text-center text-white text-sm font-bold">(817)487-0886</p>
 
 </body>
 </html>
