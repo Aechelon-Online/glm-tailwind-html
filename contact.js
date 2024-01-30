@@ -130,13 +130,13 @@ let values = []
       `
       <div class="date-wrapper flex justify-center items-center">
         <div class="big-date text-center">
-          <p class="year font-bold">${month}</p>
-          <p class="day font-bold">${date}</p>
+          <p class="year font-bold text-white">${month}</p>
+          <p class="day font-bold text-white">${date}</p>
         </div>
         <div class="date-loc">
-          <p class="location font-bold"><a class="google-map" target="_blank" href="https://www.google.com/maps/search/?api=1&query=${location}">${summary}</a></p>
-          <p class="location">${city + " " + state}</p>
-          <p class="dateTime">${realTime}</p>
+          <p class="location font-bold text-white"><a class="google-map" target="_blank" href="https://www.google.com/maps/search/?api=1&query=${location}">${summary}</a></p>
+          <p class="location text-white">${city + " " + state}</p>
+          <p class="dateTime text-white">${realTime}</p>
         </div>
       </div>
       `
