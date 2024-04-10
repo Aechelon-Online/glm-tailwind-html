@@ -1,0 +1,71 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Checkbox Total Calculator</title>
+<style>
+  .value {
+    margin-right: 5px;
+  }
+</style>
+</head>
+<body>
+
+<div style="display:flex; flex-direction:column;">
+    <label><input type="checkbox" value="150" class="checkbox"><span class="value">MC</span></label>
+    <label><input type="checkbox" value="150" class="checkbox"><span class="value">Acoustic Guitar - Ceremony</span></label> 
+    <label><input type="checkbox" value="200" class="checkbox"><span class="value">Acoustic Guitar - Cocktail Hour</span></label> 
+    <label><input type="checkbox" value="150" class="checkbox"><span class="value">Extra Speaker</span></label> 
+    <label><input type="checkbox" value="100" class="checkbox"><span class="value">Wireless Handheld/Lapel Mic</span></label> 
+    <label><input type="checkbox" value="100" class="checkbox"><span class="value">4-par Dance Floor Lights</span></label> 
+    <label><input type="checkbox" value="400" class="checkbox"><span class="value">Uplighting</span></label>
+    <label><input type="checkbox" value="100" class="checkbox"><span class="value">LED Tube Lighting</span></label>
+    <label><input type="checkbox" value="200" class="checkbox"><span class="value">Sub-woofer Speaker</span></label>
+    <label><input type="checkbox" value="150" class="checkbox"><span class="value">Moving Head Spotlights</span></label>
+    <label><input type="checkbox" value="600" class="checkbox"><span class="value">Extra Musician</span></label>
+    <label><input type="checkbox" value="600" class="checkbox"><span class="value">Photo Booth</span></label>
+    <label><input type="checkbox" value="350" class="checkbox"><span class="value">Cryo Gun</span></label>
+    <label><input type="checkbox" value="300" class="checkbox"><span class="value">Dance On Clouds</span></label>
+    <label><input type="checkbox" value="500" class="checkbox"><span class="value">Multiple Speaker Set Ups w/ Signal Link (average cost)</span></label>
+</div>
+
+
+<div id="totalDisplay">Total: 0</div>
+
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+  // Initialize total sum
+  let total = 0
+  
+  // Get all checkboxes
+  const checkboxes = document.querySelectorAll(".checkbox");
+  
+  // Function to update total display
+  function updateTotalDisplay() {
+    document.getElementById("totalDisplay").innerHTML = `${total}`
+  }
+  
+  // Add change event listeners to checkboxes
+  checkboxes.forEach(function(checkbox) {
+    checkbox.addEventListener("change", function() {
+      // Get value of the clicked checkbox
+      const value = parseInt(checkbox.value);
+      
+      // If checkbox is checked, add its value to total; otherwise, subtract its value from total
+      if (checkbox.checked) {
+        total += value;
+      } else {
+        total -= value;
+      }
+      
+      // Update total display
+      updateTotalDisplay();
+    })
+  })
+})
+</script>
+
+</body>
+</html>

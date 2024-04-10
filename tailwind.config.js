@@ -14,7 +14,7 @@ module.exports = {
     "./video.js",
     "./article.js",
     "./test-form/index.html",
-    "./pricing-test/index.html",
+    "./pricing/index.html",
     "./colleyville/**/**/index.html",
     "./dallas/**/**/index.html",
     "./flower-mound/**/**/index.html",
@@ -32,6 +32,10 @@ module.exports = {
     "./southlake/**/**/index.html",
     "./university-park/**/**/index.html",
     "./westlake/**/**/index.html",
+    "./wedding-dj-cost-calculator/index.html",
+    "./wedding-dj-prices-calculator/index.html",
+    "./calculator/wedding-dj-cost/index.html",
+    "./calculator/wedding-dj-prices/index.html"
   ],
   theme: {
     screens: {

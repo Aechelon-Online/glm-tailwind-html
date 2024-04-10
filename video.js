@@ -23,7 +23,7 @@ videoPlayer += `
     <div class="video-player">
             <div class="w-[250px] p-2 mx-2 tablet:w-[350px] flex justify-center items-center bg-no-repeat bg-center" style="background-image: url(${item.thumbnail})">
                 <a href="${item.link}">
-                    <img src="../images/yt-logo-tp.webp" alt="youtube logo" class="w-[150px]"></img>
+                    <img src="/images/yt-logo-tp.webp" alt="youtube logo" class="w-[150px]"></img>
                 </a>  
             </div>  
             <h4 class="text-md p-2 text-white text-center">${item.title}</h4>
